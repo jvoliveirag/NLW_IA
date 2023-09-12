@@ -9,18 +9,23 @@ export function App() {
   return (
     <div className="min-h-screen flex flex-col">
       <div className="px-6 py-3 flex items-center justify-between border-b">
-        <h1 className="text-xl font-bold">upload.ai</h1>
+        <div className="flex items-center">
+          <img src="favicon.png" alt="logo" width={35} className="flex flex-1"/>
+          <h1 className="text-2xl font-bold flex ml-4">
+            Upload.ai
+          </h1>
+        </div>
 
         <div className="flex items-center gap-3">
           <span className="text-sm text-muted-foreground">
-            Desenvolvido com 💜 no NLW da Rocketseat
+            Desenvolvido com 💜 no NLW da <a href="https://www.rocketseat.com.br/" className="underline font-bold">Rocketseat</a>
           </span>
 
           <Separator orientation="vertical" className="h-6" />
 
           <Button variant="outline">
             <Github className="w-4 h-4 mr-2" />
-            Github
+            <a href="https://github.com/jvoliveirag/NLW_IA">Github</a>
           </Button>
         </div>
       </div>
@@ -109,6 +114,7 @@ export function App() {
             <div className="space-y-4">
               <label htmlFor="">Temperatura</label>
               <Slider
+                className="cursor-pointer"
                 min={0}
                 max={1}
                 step={0.1}
